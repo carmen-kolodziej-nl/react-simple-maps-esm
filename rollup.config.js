@@ -1,14 +1,14 @@
-import { babel } from "@rollup/plugin-babel";
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
+import { babel } from "@rollup/plugin-babel"
+import resolve from "@rollup/plugin-node-resolve"
+import commonjs from "@rollup/plugin-commonjs"
+import { terser } from "rollup-plugin-terser"
 
-import pkg from "./package.json";
+import pkg from "./package.json"
 
 const external = [
   ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
-];
+]
 
 export default [
   {
@@ -42,13 +42,27 @@ export default [
     output: [
       {
         file: pkg.main,
-        format: "cjs",
+        format: "esm",
       },
       {
         file: pkg.module,
-        format: "es",
+        format: "esm",
       },
     ],
-    plugins: [babel({ babelHelpers: "bundled" })],
+    plugins: [
+      babel({
+        babelHelpers: "bundled",
+        presets: [
+          [
+            "@babel/preset-env",
+            {
+              targets: {
+                esmodules: true,
+              },
+            },
+          ],
+        ],
+      }),
+    ],
   },
-];
+]
