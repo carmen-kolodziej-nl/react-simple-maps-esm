@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "An svg map chart component built with and for React",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "files": [
     "dist"
@@ -62,5 +62,6 @@
     "d3-selection": "^3.0.0",
     "d3-zoom": "^3.0.0",
     "topojson-client": "^3.1.0"
-  }
+  },
+  "type": "module"
 }

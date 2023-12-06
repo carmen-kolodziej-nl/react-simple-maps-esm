@@ -17,7 +17,7 @@ export default [
     output: {
       name: "reactSimpleMaps",
       file: pkg.browser,
-      format: "umd",
+      format: "esm",
       extend: true,
       globals: {
         react: "React",
