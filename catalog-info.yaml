@@ -5,6 +5,8 @@ metadata:
   annotations:
     github.com/project-slug: carmen-kolodziej-nl/react-simple-maps-esm
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: experimental
   owner: carmen-kolodziej-nl
+  tags:
+    - SRE
