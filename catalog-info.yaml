@@ -4,9 +4,10 @@ metadata:
   name: react-simple-maps-esm
   annotations:
     github.com/project-slug: carmen-kolodziej-nl/react-simple-maps-esm
-spec:
-  type: service
-  lifecycle: experimental
-  owner: carmen-kolodziej-nl
   tags:
     - SRE
+    - USOPC
+spec:
+  type: service
+  lifecycle: production
+  owner: carmen-kolodziej-nl
