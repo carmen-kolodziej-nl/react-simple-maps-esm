@@ -1,0 +1,7 @@
+site_name: 'react-simple-maps-esm'
+
+nav:
+  - Home: README.md
+
+plugins:
+  - techdocs-core
